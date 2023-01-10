@@ -1,3 +1,3 @@
 # mr8vanilla
 
-https://www.mr8.netlify.app
+https://mr8.netlify.app
