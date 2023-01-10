@@ -1,0 +1,72 @@
+.hero {
+  padding: 0 16px 150px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero__button {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.button__contato {
+  position: relative;
+}
+
+.button__contato::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("../../img/contato.svg") no-repeat center;
+  position: absolute;
+  left: 65px;
+  top: 2px;
+}
+
+.button__contato:hover::after {
+  animation: animeDetail 1.5s ease-out;
+}
+
+@keyframes animeDetail {
+  0% {
+    transform: rotate(0);
+  }
+
+  33% {
+    transform: rotate(-25deg);
+  }
+
+  55% {
+    transform: rotate(0);
+  }
+
+  77% {
+    transform: rotate(25deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.hero__main {
+  display: grid;
+  gap: 20px;
+}
+
+.hero__main p {
+  max-width: 50ch;
+}
+
+.hero__student {
+  justify-self: center;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}

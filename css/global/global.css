@@ -29,3 +29,17 @@ video {
   max-width: 100%;
   display: block;
 }
+
+.button {
+  transition: 0.3s;
+  background: var(--cor-2);
+  padding: 6px 8px !important;
+  display: inline-block;
+  border-radius: 8px;
+  font: 600 1rem/1.25 "Outfit", sans-serif;
+  color: var(--cor-0) !important;
+}
+
+.button:hover {
+  background: var(--cor-3);
+}

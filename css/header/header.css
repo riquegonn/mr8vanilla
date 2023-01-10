@@ -34,7 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 16px 150px 16px;
+  padding: 40px 16px 120px 16px;
 }
 
 .header__menu-esq {
@@ -46,6 +46,7 @@
 .header__menu-nav {
   display: flex;
   gap: 40px;
+  align-items: center;
 }
 
 .header__menu-nav li a {
@@ -66,5 +67,11 @@
 @media (max-width: 900px) {
   .header__menu-nav {
     display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    padding-bottom: 60px;
   }
 }

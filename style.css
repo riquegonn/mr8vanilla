@@ -6,3 +6,6 @@
 /* Header */
 @import url("./css/header/header.css");
 @import url("./css/header/headerMobile.css");
+
+/* Hero */
+@import url("./css/hero/hero.css");

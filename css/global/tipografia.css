@@ -11,3 +11,9 @@
 .font__p {
   font: 400 1.25rem/1.25 "Outfit", sans-serif;
 }
+
+@media (max-width: 550px) {
+  .font__h1 {
+    font-size: 3rem;
+  }
+}
