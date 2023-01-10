@@ -1,0 +1,25 @@
+[data-anime] {
+  opacity: 0;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-130px, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(130px, 0, 0);
+}
+
+[data-anime="up"] {
+  transform: translate3d(0, 150px, 0);
+}
+
+[data-anime="down"] {
+  transform: translate3d(0, -150px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 4s;
+}

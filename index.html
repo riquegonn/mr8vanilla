@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -62,7 +62,7 @@
 
     <ul class="header__menu-mobile">
       <li>
-        <img src="./img/menuMobile.svg" alt="menu mobile">
+        <img src="./img/menuMobile.svg" alt="menu mobile" data-modal="abrir">
       </li>
     </ul>
   </section>
@@ -81,7 +81,59 @@
     <div class="hero__student">
       <video width="400" height="400" autoplay loop src="./img/student.mp4"></video>
     </div>
+
   </section>
+
+  <section class="container hero">
+    <div class="hero__studentstwo" data-anime="left">
+      <video width="400" height="400" autoplay loop src="./img/studentstwo.mp4"></video>
+    </div>
+
+    <div class="hero__main hero__main-dir" data-anime="right">
+      <h1 class="font__h1">Conheça o mr8<span class="cor-2">!</span></h1>
+      <p class="font__p">No nosso site você poderá ver comentários e depoimentos de ex-alunos, além de ficar por dentro do que estamos postando nas redes sociais! Acesse o menu para mais informações, ou <span class="cor-2">contate-nos!</span></p>
+      <div class="hero__button font__menu">
+        <a class="button" href="/">pré ifba</a>
+        <a class="button__preEnem" href="/">pré enem</a>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section>
+    <ul class="header__mobile font__menu" data-modal="menu">
+      <li class="menu__main">
+        <p class="cor-0 menu__menu cor-2">Menu</p>
+        <button class="menu__fechar cor-2" data-modal="fechar">X</button>
+      </li>
+      <li>
+        <a href="/" class="menu__down">
+          <p>serviços</p>
+          <span class="menuDetail"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/" class="menu__down">
+          <p>cursos</p>
+          <span class="menuDetail"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/" class="menu__down">
+          <p>sobre</p>
+          <span class="menuDetail"></span>
+        </a>
+      </li>
+      <li>
+        <a href="/">preços</a>
+      </li>
+      <li>
+        <a href="/">contato</a>
+      </li>
+    </ul>
+  </section>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>

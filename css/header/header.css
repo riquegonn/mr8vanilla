@@ -68,6 +68,11 @@
   .header__menu-nav {
     display: none;
   }
+
+  .menuDetail {
+    background: url("../../img/menuDetailf7.svg") no-repeat center;
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 550px) {

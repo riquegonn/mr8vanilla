@@ -2,8 +2,72 @@
   cursor: pointer;
 }
 
+.header__mobile {
+  height: 100vh;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  opacity: 0.9;
+  flex-direction: column;
+  background: #000;
+  justify-content: start;
+  align-items: flex-end;
+  z-index: 2000;
+  padding: 30px;
+  animation: menu 1s forwards;
+}
+
+.header__mobile.ativo {
+  display: flex;
+}
+
+.menu__main {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.menu__menu {
+  font-size: 1.25rem;
+}
+
+.menu__fechar {
+  border-radius: 50%;
+  padding: 5px 8px;
+  border: 1px solid var(--cor-2);
+  cursor: pointer;
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+    transform: translate3d(500px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.header__mobile li a {
+  padding: 12px 0;
+  display: flex;
+  gap: 10px;
+  transition: 0.3s;
+  font-size: 1.25rem;
+  color: white;
+}
+
 @media (min-width: 900px) {
   .header__menu-mobile {
     display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .header__mobile {
+    width: 100%;
   }
 }

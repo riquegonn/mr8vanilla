@@ -8,11 +8,12 @@
 
 .hero__button {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 
-.button__contato {
+.button__contato,
+.button__preEnem {
   position: relative;
 }
 
@@ -22,12 +23,22 @@
   height: 18px;
   background: url("../../img/contato.svg") no-repeat center;
   position: absolute;
-  left: 65px;
+  left: 62px;
   top: 2px;
 }
 
-.button__contato:hover::after {
+.button__contato:hover::after,
+.button__preEnem:hover::after {
   animation: animeDetail 1.5s ease-out;
+}
+
+.button__preEnem::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../../img/handDetail.svg") no-repeat center;
+  position: absolute;
+  left: 72px;
 }
 
 @keyframes animeDetail {
@@ -65,8 +76,29 @@
   justify-self: center;
 }
 
+.hero__main-dir {
+  justify-self: end;
+}
+
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    padding-bottom: 60px;
+  }
+
+  .hero__main-dir {
+    justify-self: initial;
+  }
+
+  .hero__studentstwo {
+    grid-row: 2 / 3;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .button__preEnem::after,
+  .button__contato::after {
+    animation: animeDetail 2s ease-out infinite;
   }
 }
