@@ -1,3 +1,8 @@
+/* Global */
 @import url("./css/global/global.css");
 @import url("./css/global/cores.css");
 @import url("./css/global/tipografia.css");
+
+/* Header */
+@import url("./css/header/header.css");
+@import url("./css/header/headerMobile.css");

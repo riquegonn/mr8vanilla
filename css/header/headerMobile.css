@@ -1,0 +1,9 @@
+.header__menu-mobile {
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .header__menu-mobile {
+    display: none;
+  }
+}

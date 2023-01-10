@@ -1,0 +1,21 @@
+:root {
+  --cor-0: #f7f7f7;
+  --cor-1: #23272a;
+  --cor-2: #1e8dfc;
+}
+
+.header__menu-nav li a:hover {
+  color: var(--cor-2);
+}
+
+.cor-0 {
+  color: var(--cor-0);
+}
+
+.cor-1 {
+  color: var(--cor-1);
+}
+
+.cor-2 {
+  color: var(--cor-2);
+}

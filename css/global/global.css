@@ -1,0 +1,31 @@
+body {
+  background: var(--cor-0);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+p,
+a,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: var(--cor-1);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}

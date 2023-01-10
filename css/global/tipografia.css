@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+.font__menu {
+  font: 600 1rem/1.25 "Outfit", sans-serif;
+}
+
+.font__h1 {
+  font: 700 4rem "Outfit", sans-serif;
+}
+
+.font__p {
+  font: 400 1.25rem/1.25 "Outfit", sans-serif;
+}

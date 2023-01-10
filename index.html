@@ -11,24 +11,33 @@
 
 <body>
 
-  <section>
-    <p>Se matricule pelo site e tenha 5% de desconto! 🔥</p>
+  <section class="promotion cor-0">
+    <p>Se <span class="cor-2">matricule</span> pelo site e tenha 5% de desconto 🔥</p>
   </section>
 
-  <section>
-    <div>
-      <img src="./img/logo.png" alt="logo mr8">
+  <section class="header">
+    <div class="header__menu-esq">
+      <a href="/"><img src="./img/logo.png" alt="logo mr8"></a>
 
       <nav aria-label="menu">
-        <ul>
+        <ul class="header__menu-nav font__menu">
           <li>
-            <a href="/">serviços</a>
+            <a href="/" class="menu__down">
+              <p>serviços</p>
+              <span class="menuDetail"></span>
+            </a>
           </li>
           <li>
-            <a href="/">cursos</a>
+            <a href="/" class="menu__down">
+              <p>cursos</p>
+              <span class="menuDetail"></span>
+            </a>
           </li>
           <li>
-            <a href="/">sobre</a>
+            <a href="/" class="menu__down">
+              <p>sobre</p>
+              <span class="menuDetail"></span>
+            </a>
           </li>
           <li>
             <a href="/">preços</a>
@@ -41,12 +50,18 @@
 
     </div>
 
-    <ul>
+    <ul class="header__menu-nav font__menu">
       <li>
         <a href="/">entrar</a>
       </li>
       <li>
         <a href="/">pré matrícula</a>
+      </li>
+    </ul>
+
+    <ul class="header__menu-mobile">
+      <li>
+        <img src="./img/menuMobile.svg" alt="menu mobile">
       </li>
     </ul>
   </section>

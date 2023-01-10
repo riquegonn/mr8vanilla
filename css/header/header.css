@@ -1,0 +1,70 @@
+.promotion {
+  background: #23272a;
+  padding: 20px 16px;
+  text-align: center;
+}
+
+.promotion p {
+  font: 600 1.125rem/1.375 "Outfit", sans-serif;
+  animation: promotion 1.2s linear infinite;
+}
+
+@keyframes promotion {
+  0% {
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 16px 150px 16px;
+}
+
+.header__menu-esq {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__menu-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.header__menu-nav li a {
+  padding: 12px 0;
+  display: flex;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.menuDetail {
+  background: url("../../img/menuDetail.svg") no-repeat center;
+  width: 10px;
+  height: 6px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+  .header__menu-nav {
+    display: none;
+  }
+}
