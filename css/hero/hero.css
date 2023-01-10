@@ -1,5 +1,5 @@
 .hero {
-  padding: 0 16px 150px 16px;
+  padding: 110px 16px 150px 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -83,6 +83,7 @@
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 

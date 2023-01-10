@@ -3,7 +3,6 @@ export default function initMenuMobile() {
   const fecharModal = document.querySelector("[data-modal='fechar']");
   const containerModal = document.querySelector("[data-modal='menu']");
   const linkModal = document.querySelectorAll(".header__mobile li a");
-  console.log(linkModal);
 
   function toggleModal(e) {
     e.preventDefault();

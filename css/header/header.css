@@ -30,11 +30,15 @@
   }
 }
 
+.header__bg {
+  border-bottom: 1px solid var(--cor-f);
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 16px 120px 16px;
+  padding: 40px 16px 40px 16px;
 }
 
 .header__menu-esq {
@@ -72,11 +76,5 @@
   .menuDetail {
     background: url("../../img/menuDetailf7.svg") no-repeat center;
     margin-top: 12px;
-  }
-}
-
-@media (max-width: 550px) {
-  .header {
-    padding-bottom: 60px;
   }
 }
