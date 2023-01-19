@@ -1,17 +1,41 @@
 export default function initMenuDd() {
-  const linkDd = document.querySelectorAll(".menu__down");
-  const servicosDd = document.querySelector(".servicos__dd");
-  const servicos = document.querySelector(".servicos__bg");
+  const ddLi = document.querySelectorAll(".menu__dd-li");
+  const ddContainer = document.querySelectorAll(".menu__dd-bg");
+  const ddContainerUl = document.querySelector(".menu__dd-ul");
 
-  function handleFunction() {
-    servicos.classList.toggle("ativo");
-    servicosDd.classList.toggle("ativo");
+  function activeTab(i) {
+    ddContainer.forEach((s) => {
+      s.classList.remove("ativo");
+    });
+    ddContainer[i].classList.add("ativo");
   }
 
-  linkDd.forEach((i) =>
-    i.addEventListener("click", (e) => {
-      e.preventDefault();
-      handleFunction();
-    })
-  );
+  function styleTab(i) {
+    ddLi.forEach((s) => {
+      s.classList.remove("ativo");
+    });
+    ddLi[i].classList.add("ativo");
+  }
+
+  ddLi.forEach((iMenu, index) => {
+    iMenu.addEventListener("click", () => {
+      activeTab(index);
+      styleTab(index);
+    });
+  });
+
+  function clicouFora() {
+    ddContainer.forEach((s) => {
+      s.classList.remove("ativo");
+    });
+    ddLi.forEach((i) => {
+      i.classList.remove("ativo");
+    });
+  }
+
+  document.addEventListener("mousedown", (e) => {
+    if (!ddContainerUl.contains(e.target)) {
+      clicouFora();
+    }
+  });
 }

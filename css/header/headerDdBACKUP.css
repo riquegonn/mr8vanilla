@@ -1,0 +1,88 @@
+.servicos__dd {
+  box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px,
+    rgb(0 0 0 / 5%) 0px 4px 6px -2px;
+  display: none;
+}
+
+.servicos__dd.ativo {
+  display: block;
+  animation: menuDd 0.5s ease-in-out forwards;
+}
+
+@keyframes menuDd {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1500px;
+  }
+}
+
+.servicos {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 40px 16px;
+  gap: 50px;
+  animation: servicosAnim 0.4s ease-in-out forwards;
+}
+
+@keyframes servicosAnim {
+  from {
+    transform: translateY(-5%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.servicos__main {
+  display: grid;
+  gap: 10px;
+  position: relative;
+}
+
+.servicos__menu {
+  display: grid;
+  gap: 20px;
+  justify-self: center;
+}
+
+.servicos__menu div a {
+  position: relative;
+}
+
+.servicos__menu div a::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--cor-2);
+  position: absolute;
+  left: -14px;
+  top: 7px;
+  border-radius: 50%;
+}
+
+.servicos__menu div a:hover {
+  color: #000;
+}
+
+.servicos__menu div a:hover::before {
+  background: var(--cor-3);
+}
+
+.servicos__galeria {
+  display: grid;
+  padding: 16px;
+  border-radius: 8px;
+  justify-items: start;
+  gap: 5px;
+  border: 2px solid var(--cor-2);
+}
+
+.servicos__dd.ativo {
+  color: var(--cor-2);
+}

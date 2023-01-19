@@ -1,46 +1,57 @@
-.servicos__bg {
+.menu__dd-bg {
   box-shadow: rgb(0 0 0 / 10%) 0px 10px 15px -3px,
     rgb(0 0 0 / 5%) 0px 4px 6px -2px;
   display: none;
 }
 
-.servicos__bg.ativo {
+.menu__dd-bg.ativo {
   display: block;
-  animation: menuDd 0.5s ease-in-out forwards;
+  animation: slide-in-down 0.5s ease-in-out forwards;
 }
 
-@keyframes menuDd {
-  0% {
-    transform: translate3d(0, -100px, 0);
-    opacity: 0;
-  }
-  25% {
-    transform: translate3d(0, -90px, 0);
-    opacity: 0;
-  }
-  50% {
-    transform: translate3d(0, -80px, 0);
-    opacity: 0;
-  }
-  75% {
-    transform: translate3d(0, -70px, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
+.menu__dd-li {
+  cursor: pointer;
 }
 
-.servicos {
+.ddCursos,
+.ddSobre {
+  position: relative;
+}
+
+.menu__dd-li.ativo .ddCursos::after,
+.menu__dd-li.ativo .ddSobre::after {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: var(--cor-2);
+  position: absolute;
+  left: 0;
+  top: 70px;
+  border-radius: 5px;
+}
+
+.menu__dd-li.ativo p .menuDetail {
+  transform: rotate(180deg);
+  transition: 0.3s;
+}
+
+.ddCursos::after {
+  margin-left: -20px;
+}
+
+.ddSobre::after {
+  margin-left: -23px;
+}
+
+.menu__dd-container {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   padding: 40px 16px;
   gap: 50px;
-  animation: servicosAnim 0.4s ease-in-out forwards;
+  animation: fade-in-down 0.4s ease-in-out forwards;
 }
 
-@keyframes servicosAnim {
+@keyframes fade-in-down {
   from {
     transform: translateY(-5%);
     opacity: 0;
@@ -53,50 +64,74 @@
   }
 }
 
-.servicos__main {
+@keyframes slide-in-down {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1500px;
+  }
+}
+
+.menu__dd-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+.menu__dd-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu__dd-main {
   display: grid;
   gap: 10px;
-  position: relative;
 }
 
-.servicos__menu {
-  display: grid;
-  gap: 20px;
-  justify-self: center;
-}
-
-.servicos__menu div a {
-  position: relative;
-}
-
-.servicos__menu div a::before {
+.detailArrow::after {
   content: "";
-  width: 6px;
-  height: 6px;
-  background: var(--cor-2);
+  width: 18px;
+  height: 18px;
+  background: url("../../img/arrowRight.svg") no-repeat;
   position: absolute;
-  left: -14px;
-  top: 7px;
-  border-radius: 50%;
+  margin-left: 5px;
+  margin-top: 2px;
+  animation: arrowAnim 0.5s forwards infinite;
 }
 
-.servicos__menu div a:hover {
-  color: #000;
+@keyframes arrowAnim {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(5px, 0, 0);
+  }
 }
 
-.servicos__menu div a:hover::before {
-  background: var(--cor-3);
+.detailLink {
+  position: relative;
 }
 
-.servicos__galeria {
+.detailLink::before {
+  content: "";
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  background: var(--cor-2);
+  transition: 0.3s;
+  top: 25px;
+}
+
+.detailLink:hover::before {
+  width: 100%;
+}
+
+.menu__dd-last {
   display: grid;
-  padding: 16px;
-  border-radius: 8px;
   justify-items: start;
-  gap: 5px;
-  border: 2px solid var(--cor-2);
-}
-
-.servicos__dd.ativo {
-  color: var(--cor-2);
+  align-content: center;
+  gap: 12px;
 }
