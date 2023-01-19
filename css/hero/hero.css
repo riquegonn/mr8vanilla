@@ -6,6 +6,21 @@
   gap: 50px;
 }
 
+.detailHero__bg {
+  position: relative;
+}
+
+.detailHero__bg::before {
+  content: "";
+  width: 594px;
+  height: 357px;
+  background: url("../../img/arrowBg.svg") no-repeat;
+  position: absolute;
+  left: 630px;
+  top: 140px;
+  z-index: 100;
+}
+
 .hero__button {
   display: flex;
   gap: 20px;
