@@ -1,0 +1,29 @@
+.depoimentos__bg {
+  background: var(--cor-1);
+  position: relative;
+  z-index: 2;
+}
+
+.depoimentos {
+  display: grid;
+  gap: 40px;
+  padding: 75px 16px;
+  justify-items: center;
+}
+
+.depoimentos__detail {
+  content: "";
+  background: url("../../img/depoimentos.svg") no-repeat center;
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: 600px;
+}
+
+.depoimentos__action {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
