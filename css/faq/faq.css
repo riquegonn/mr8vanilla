@@ -1,0 +1,45 @@
+.faq__bg {
+  background: var(--cor-1);
+}
+
+.faq {
+  padding: 75px 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+
+.faq__ul {
+  display: grid;
+  gap: 40px;
+}
+
+.faq__main {
+  display: grid;
+  align-items: center;
+}
+
+.faqArrow {
+  position: relative;
+}
+
+.faqArrow::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("../../img/arrowWhite.svg") no-repeat;
+  position: absolute;
+  margin-left: 5px;
+  margin-top: 2px;
+  animation: arrowAnim 0.5s forwards infinite;
+}
+
+@media (max-width: 900px) {
+  .faq {
+    grid-template-columns: 1fr;
+  }
+
+  .faq__main {
+    gap: 30px;
+  }
+}
