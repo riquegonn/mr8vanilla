@@ -4,6 +4,11 @@
   font: 600 1rem/1.25 "Outfit", sans-serif;
 }
 
+.font__menuFooter {
+  font: 600 1rem/1.25 "Outfit", sans-serif;
+  text-transform: uppercase;
+}
+
 .font__h1 {
   font: 700 4rem "Outfit", sans-serif;
 }
