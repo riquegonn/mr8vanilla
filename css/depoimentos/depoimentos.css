@@ -53,6 +53,12 @@
   padding: 20px;
   border-radius: 20px;
   position: relative;
+  transition: 0.3s;
+}
+
+.depoimentos__main:hover {
+  background: var(--cor-3);
+  cursor: pointer;
 }
 
 .depoimentos__main::before {

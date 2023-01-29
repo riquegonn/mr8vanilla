@@ -1,0 +1,28 @@
+.insta {
+  padding: 75px 16px 75px 16px;
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+}
+
+.insta__ul {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.insta__ul li {
+  position: relative;
+}
+
+.insta__ul li::after {
+  content: "";
+  width: 57px;
+  height: 57px;
+  background: url("../../img/instaDetail.svg") no-repeat;
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  z-index: -1;
+}
