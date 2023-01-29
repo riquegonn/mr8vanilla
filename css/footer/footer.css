@@ -13,18 +13,18 @@
 .footer__ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 60px;
+  gap: 20px;
 }
 
 .footer__ul li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 10px;
 }
 
 .footer__ul li a {
-  padding: 16px;
+  padding: 16px 0;
   display: inline-block;
 }
 
@@ -50,4 +50,10 @@
   background: rgba(35, 39, 42, 0.5);
   left: 0;
   top: -10px;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
 }
