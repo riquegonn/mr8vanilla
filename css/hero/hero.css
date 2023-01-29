@@ -99,7 +99,7 @@
   .hero {
     grid-template-columns: 1fr;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
 
   .hero__main-dir {

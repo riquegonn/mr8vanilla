@@ -11,19 +11,73 @@
   justify-items: center;
 }
 
-.depoimentos__detail {
+.depoimentos__img {
+  position: relative;
+}
+.depoimentos__img::after {
   content: "";
   background: url("../../img/depoimentos.svg") no-repeat center;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   position: absolute;
-  top: 0;
+  top: -120px;
+  left: 200px;
   z-index: -1;
-  left: 600px;
 }
 
 .depoimentos__action {
   display: grid;
   justify-items: center;
   gap: 20px;
+}
+
+.depoimentos__perfil {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  gap: 10px;
+}
+
+.depoimentos__perfil-nome {
+  display: grid;
+  gap: 4px;
+}
+
+.depoimentos__perfil-p {
+  max-width: 50ch;
+  margin-top: 40px;
+}
+
+.depoimentos__main {
+  background: var(--cor-2);
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.depoimentos__main::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: var(--cor-0);
+  position: absolute;
+  left: 0;
+  top: 120px;
+}
+
+.depoimentos__carousel {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .depoimentos__img::after {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .depoimentos__carousel {
+    flex-direction: column;
+  }
 }
