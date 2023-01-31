@@ -9,14 +9,10 @@
   gap: 100px;
 }
 
-.faq__ul {
-  display: grid;
-  gap: 40px;
-}
-
 .faq__main {
   display: grid;
-  align-items: center;
+  align-content: center;
+  gap: 40px;
 }
 
 .faqArrow {
@@ -34,9 +30,61 @@
   animation: arrowAnim 0.5s forwards infinite;
 }
 
+.faq__ul {
+  display: grid;
+  align-content: center;
+  gap: 20px;
+}
+
+.faq__ul dd {
+  display: none;
+}
+
+.faq__ul dt {
+  position: relative;
+}
+
+.faq__ul dt:hover {
+  cursor: pointer;
+}
+
+.faq__ul dt::after {
+  content: "";
+  background: url("../../img/menuDetailWhite.svg") no-repeat center;
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.faq__ul dt.ativo {
+  color: var(--cor-2);
+}
+.faq__ul dt.ativo::after {
+  transform: rotate(180deg);
+}
+
+.faq__ul dd.ativo {
+  display: block;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @media (max-width: 900px) {
   .faq {
     grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .faq__main {
